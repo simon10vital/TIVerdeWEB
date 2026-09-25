@@ -1,0 +1,185 @@
+/* ============================= */
+/* CADASTRO */
+/* ============================= */
+
+.dados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+.campo input:valid,
+.campo select:valid,
+.campo textarea:valid {
+    border-color: #2e7d32;
+}
+
+.campo input:invalid,
+.campo select:invalid,
+.campo textarea:invalid {
+    border-color: #d32f2f;
+}
+
+input:not(:placeholder-shown):invalid {
+    border-color: #d32f2f;
+}
+
+input:not(:placeholder-shown):valid {
+    border-color: #2e7d32;
+}
+
+.alerta {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 2px solid #ffeeba;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .dados {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* BREAKPOINTS */
+
+@media (max-width: 1200px) {
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 992px) {
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+    }
+
+    .menu-links.ativo {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}

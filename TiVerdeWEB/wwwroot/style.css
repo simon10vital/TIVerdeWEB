@@ -1,0 +1,406 @@
+/* CONFIGURAÇÕES GERAIS */
+body {
+    margin: 0;
+    text-align: center;
+    background-color: #f1f8f4;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+
+/* CABEÇALHO */
+header {
+    background-color: #1b5e20;
+    padding: 25px;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 50px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+
+/* MENU - FLEXBOX */
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* IMAGEM */
+.imagem-principal {
+    width: 700px;
+    max-width: 90%;
+    display: block;
+    margin: 30px auto;
+    border-radius: 20px;
+}
+
+
+/* CONTEÚDO */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    color: #2e7d32;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+/* GRID */
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+
+/* RODAPÉ */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    padding: 25px;
+    margin-top: 40px;
+    line-height: 1.6;
+}
+
+
+/* BREAKPOINTS */
+
+@media (max-width: 1200px) {
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 992px) {
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+    }
+
+    .menu-links.ativo {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+}
+
+/* DROPDOWN */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #1b5e20;
+    min-width: 160px;
+    padding: 10px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ============================= */
+/* ESTILO DO CADASTRO             */
+/* ============================= */
+
+.dados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form {
+    max-width: 1000px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+    border-color: #2e7d32;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border-color: #d32f2f;
+}
+
+input:not(:placeholder-shown):invalid {
+    border-color: #d32f2f;
+}
+
+input:not(:placeholder-shown):valid {
+    border-color: #2e7d32;
+}
+
+select:invalid {
+    border-color: #d32f2f;
+}
+
+select:valid {
+    border-color: #2e7d32;
+}
+
+
+/* ALERTA */
+
+.alerta {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 2px solid #ffeeba;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+
+/* TOAST */
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+
+/* RESPONSIVIDADE DO FORMULÁRIO */
+
+@media (max-width: 768px) {
+
+    .dados {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Área dos campos do formulário */
+#conteudo fieldset {
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: #f1f8f4;
+}
+
+/* Botão Enviar */
+#conteudo form button {
+    background-color: white;
+    color: #222;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#conteudo form button:hover {
+    border-color: #2e7d32;
+    background-color: #f1f8f4;
+}
+
+#conteudo form button:focus {
+    outline: 3px solid #81c784;
+}
+
+#conteudo form button:active {
+    transform: scale(0.95);
+}
+
+/* Caixas de seleção: voluntário e doação */
+#conteudo input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* Quando a opção estiver marcada */
+#conteudo input[type="checkbox"]:checked {
+    background-color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+/* Efeito ao passar o mouse */
+#conteudo input[type="checkbox"]:hover {
+    border-color: #2e7d32;
+}
+
+/* BOTÃO HAMBÚRGUER */
+.menu-hamburguer {
+    display: block !important;
+}
